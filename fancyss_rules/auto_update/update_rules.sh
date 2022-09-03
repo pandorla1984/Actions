@@ -102,7 +102,7 @@ get_chnroute2(){
 	# chnroute2.txt from ipip
 
 	# source-2：ipip, 20220604: total 6182 subnets, 13240665434 unique IPs
-	wget -4 https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/ipip_country/ipip_country_cn.netset -qO ${CURR_PATH}/chnroute2_tmp.txt
+	wget -4 https://github.com/misakaio/chnroutes2/blob/master/chnroutes.txt -qO ${CURR_PATH}/chnroute2_tmp.txt
 
 	if [ ! -f "chnroute2_tmp.txt" ]; then
 		echo "chnroute2 download faild!"
@@ -123,7 +123,7 @@ get_chnroute2(){
 	
 	# 4. write json
 	local SOURCE="ipip"
-	local URL="https://github.com/firehol/blocklist-ipsets/blob/master/ipip_country/ipip_country_cn.netset"
+	local URL="https://github.com/misakaio/chnroutes2/blob/master/chnroutes.txt"
 	local CURR_DATE=$(TZ=CST-8 date +%Y-%m-%d\ %H:%M)
 	local MD5_VALUE=${md5sum1}
 	local LINE_COUN=$(cat ${CURR_PATH}/chnroute2_tmp.txt | wc -l)
@@ -204,7 +204,7 @@ get_cdn(){
 	
 	# 2.merge
 	cat accelerated-domains.china.conf apple.china.conf google.china.conf | sed '/^#/d' | sed "s/server=\/\.//g" | sed "s/server=\///g" | sed -r "s/\/\S{1,30}//g" | sed -r "s/\/\S{1,30}//g" >cdn_download.txt
-	cat cdn_koolcenter.txt cdn_download.txt | sort -u >cdn_tmp.txt
+	cat cdn_koolshare.txt cdn_download.txt | sort -u >cdn_tmp.txt
 
 	# 3. compare
 	local md5sum1=$(md5sum cdn_tmp.txt | sed 's/ /\n/g' | sed -n 1p)
