@@ -69,5 +69,3 @@ update.googleapis.com
 www-google-analytics.l.google.com
 www-googletagmanager.l.google.com
 www.gstatic.com
-
-
