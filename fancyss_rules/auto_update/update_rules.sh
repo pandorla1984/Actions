@@ -6,7 +6,7 @@ RULE_FILE=${RULE_PATH}/rules.json.js
 OBJECT_1='{}'
 
 prepare(){
-	apt-get -qq install moreutils
+	sudo apt-get -qq install moreutils
 	cd ${CURR_PATH}
 }
 
