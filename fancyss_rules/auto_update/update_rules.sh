@@ -6,6 +6,7 @@ RULE_FILE=${RULE_PATH}/rules.json.js
 OBJECT_1='{}'
 
 prepare(){
+	apt-get -qq install moreutils
 	cd ${CURR_PATH}
 }
 
@@ -20,8 +21,8 @@ get_gfwlist(){
 	fi
 
 	# 2. merge
-	cat ${CURR_PATH}/gfwlist_download.conf ${CURR_PATH}/gfwlist_fancyss.conf | grep -Ev "([0-9]{1,3}[\.]){3}[0-9]{1,3}" | sed "s/^/server=&\/./g" | sed "s/$/\/127.0.0.1#7913/g" >${CURR_PATH}/gfwlist_merge.conf
-	cat ${CURR_PATH}/gfwlist_download.conf ${CURR_PATH}/gfwlist_fancyss.conf | grep -Ev "([0-9]{1,3}[\.]){3}[0-9]{1,3}" | sed "s/^/ipset=&\/./g" | sed "s/$/\/gfwlist/g" >>${CURR_PATH}/gfwlist_merge.conf
+	cat ${CURR_PATH}/gfwlist_download.conf ${CURR_PATH}/gfwlist_koolshare.conf | grep -Ev "([0-9]{1,3}[\.]){3}[0-9]{1,3}" | sed "s/^/server=&\/./g" | sed "s/$/\/127.0.0.1#7913/g" >${CURR_PATH}/gfwlist_merge.conf
+	cat ${CURR_PATH}/gfwlist_download.conf ${CURR_PATH}/gfwlist_koolshare.conf | grep -Ev "([0-9]{1,3}[\.]){3}[0-9]{1,3}" | sed "s/^/ipset=&\/./g" | sed "s/$/\/gfwlist/g" >>${CURR_PATH}/gfwlist_merge.conf
 
 	# 3. sort
 	sort -k 2 -t. -u ${CURR_PATH}/gfwlist_merge.conf >${CURR_PATH}/gfwlist_tmp.conf
