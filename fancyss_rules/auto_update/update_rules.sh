@@ -6,10 +6,6 @@ RULE_FILE=${RULE_PATH}/rules.json.js
 OBJECT_1='{}'
 
 prepare(){
-	if ! type -p sponge &>/dev/null; then
-	    printf '%s\n' "error: sponge is not installed, exiting..."
-	    exit 1
-	fi
 	cd ${CURR_PATH}
 }
 
