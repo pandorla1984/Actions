@@ -5,6 +5,7 @@ a4.mzstatic.com
 a5.mzstatic.com
 adcdownload.apple.com
 adcdownload.apple.com.akadns.net
+app-site-association.cdn-apple.com
 appldnld.apple.com
 appldnld.g.aaplimg.com
 appleid.cdn-apple.com
@@ -39,6 +40,7 @@ clientflow.apple.com.akadns.net
 configuration.apple.com
 configuration.apple.com.akadns.net
 cstat.apple.com
+cstat.cdn-apple.com
 dd-cdn.origin-apple.com.akadns.net
 download.developer.apple.com
 gs-loc-cn.apple.com
@@ -56,6 +58,8 @@ gspe19-cn.ls.apple.com
 gspe21-ssl.ls.apple.com
 gspe21.ls.apple.com
 gspe35-ssl.ls.apple.com
+guzzoni-apple-com.v.aaplimg.com
+guzzoni.apple.com
 iadsdk.apple.com
 icloud-cdn.icloud.com.akadns.net
 icloud.cdn-apple.com
@@ -93,9 +97,9 @@ ocsp.apple.com
 ocsp2.apple.com
 oscdn.apple.com
 oscdn.origin-apple.com.akadns.net
+osxapps.itunes.g.aaplimg.com
 pancake.apple.com
 pancake.cdn-apple.com.akadns.net
-phobos.apple.com
 prod-support.apple-support.akadns.net
 publicassets.cdn-apple.com
 reserve-prime.apple.com
@@ -110,6 +114,7 @@ store.storeimages.apple.com.akadns.net
 store.storeimages.cdn-apple.com
 support-china.apple-support.akadns.net
 support.apple.com
+swallow-apple-com.v.aaplimg.com
 swallow.apple.com
 swcatalog-cdn.apple.com.akadns.net
 swcatalog.apple.com
@@ -125,6 +130,7 @@ updates.cdn-apple.com
 valid.apple.com
 valid.origin-apple.com.akadns.net
 weather-data.apple.com
+weather-data.apple.com.akadns.net
 www.apple.com
 www.apple.com.edgekey.net
 www.apple.com.edgekey.net.globalredir.akadns.net
